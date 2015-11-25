@@ -6,12 +6,19 @@ import android.view.Menu
 import android.view.MenuItem
 
 import com.facebook.appevents.AppEventsLogger
+//import kotlinx.android.synthetic.activity_main.hello as helloView
+import org.jetbrains.anko.*
 
 class MainActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+        //helloView.setText("yo")
+        relativeLayout {
+          textView(R.string.hello_world) {
+          }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
