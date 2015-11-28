@@ -2,12 +2,13 @@ package com.graffity
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 
 import com.facebook.appevents.AppEventsLogger
 //import kotlinx.android.synthetic.activity_main.hello as helloView
-import org.jetbrains.anko.*
+//import org.jetbrains.anko.*
 
 class MainActivity : Activity() {
 
@@ -25,10 +26,16 @@ class MainActivity : Activity() {
         user.age = 18
         user.apply()
         */
-        User(this).edit {
+        val user = User(this)
+        user.edit {
             name = "Andrew Chen"
-            age = 17
+            age = 16
         }
+        Log.d("Andrew", "age: " + user.age);
+        user.edit {
+            age = 15
+        }
+        Log.d("Andrew", "age: " + user.age);
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
