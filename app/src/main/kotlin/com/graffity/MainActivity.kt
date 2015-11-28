@@ -13,11 +13,21 @@ class MainActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main)
         //helloView.setText("yo")
-        relativeLayout {
-          textView(R.string.hello_world) {
-          }
+        //relativeLayout {
+        //    textView(R.string.hello_world) {
+        //    }
+        //}
+        /*
+        var user = User(this)
+        user.name = "Andrew Chen"
+        user.age = 18
+        user.apply()
+        */
+        User(this).edit {
+            name = "Andrew Chen"
+            age = 17
         }
     }
 
